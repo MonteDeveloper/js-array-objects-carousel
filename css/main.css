@@ -1,0 +1,29 @@
+#selectedImage{
+    background-size: cover;
+    background-position: center;
+}
+
+.container > div > div.rounded-top{
+    box-shadow: 0px 0px 34px -8px #000000;
+    height: 90%;
+}
+
+.container > div > div.rounded-bottom{
+    background-color: #353535;
+    box-shadow: 0px 0px 34px -8px #000000;
+}
+
+button{
+    transition: opacity .2s, transform .1s !important;
+    opacity: .8;
+}
+
+button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+button:active{
+    border: none !important;
+    transform: scale(.7);
+}
