@@ -24,6 +24,8 @@ const listImages = [
 
 const elMiniaturesContainer = document.getElementById("miniatures");
 const elSelectedImg = document.getElementById("selectedImage");
+const elTitleImg = document.getElementById("my-titleImg");
+const elTextImg = document.getElementById("my-textImg");
 
 let selectedImageId = 0;
 
@@ -37,6 +39,8 @@ listImages.forEach((image, counter) => {
     if(counter == selectedImageId){
         newDiv.style.border = "3px solid white";
         elSelectedImg.style.backgroundImage = `url("../${image.image}")`;
+        elTitleImg.innerHTML = image.title;
+        elTextImg.innerHTML = image.text;
     }else{
         newDiv.style.filter = "blur(.1rem) grayscale(100%)";
     }
@@ -84,6 +88,8 @@ function updateCarousel(updateDirection){
     elNewSelectedImage.style.border = "3px solid white";
     elNewSelectedImage.style.filter = "none";
     elSelectedImg.style.backgroundImage = elNewSelectedImage.style.backgroundImage;
+    elTitleImg.innerHTML = listImages[selectedImageId].title;
+    elTextImg.innerHTML = listImages[selectedImageId].text;
 
     if(isAnimationPlaying){
         myInterval = setInterval(() => {
