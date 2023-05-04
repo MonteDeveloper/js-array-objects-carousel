@@ -33,13 +33,13 @@ listImages.forEach((image, counter) => {
     let newDiv = document.createElement("div");
     newDiv.classList.add("flex-grow-1");
     newDiv.classList.add("my-miniature");
-    newDiv.style.backgroundImage = `url("../${image.image}")`;
+    newDiv.style.backgroundImage = `url("./${image.image}")`;
     newDiv.style.backgroundSize = "cover";
     newDiv.style.backgroundPosition = "center";
     newDiv.setAttribute('data-imgId', counter);
     if(counter == selectedImageId){
         newDiv.style.border = "3px solid white";
-        elSelectedImg.style.backgroundImage = `url("../${image.image}")`;
+        elSelectedImg.style.backgroundImage = `url("./${image.image}")`;
         elTitleImg.innerHTML = image.title;
         elTextImg.innerHTML = image.text;
     }else{

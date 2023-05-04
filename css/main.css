@@ -18,7 +18,7 @@
 }
 
 #selectedImage{
-    transition: background-image 0.2s;
+    transition: background-image .5s;
 }
 
 .container > div > div.rounded-bottom{
